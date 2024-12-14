@@ -8,6 +8,14 @@ class Employee {
     this.#salary = salary;
   }
 
+  setName(name) {
+    this.#name = name;
+  }
+
+  getName() {
+    return this.#name;
+  }
+
   show() {
     return `Name: ${this.#name}, Age: ${this.#age}, Salary: ${this.#salary}`;
   }
@@ -43,6 +51,7 @@ class Student {
   }
 }
 let ourEmployee = new Employee("Zhakyp", 19, 40000);
+let myName = new Employee();
 let ourEmployee1 = new Employee();
 let ourEmployee2 = new Employee();
 let ourEmployee3 = new Employee();
@@ -52,6 +61,8 @@ let student = new Student();
 // console.log(student.name);
 // console.log(ourEmployee.name);
 console.log(ourEmployee.show());
+console.log(myName.setName("Zhakyp"));
+console.log(myName.getName());
 
 ourEmployee1.name = "Aman";
 ourEmployee1.age = 24;
