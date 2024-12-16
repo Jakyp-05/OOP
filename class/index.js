@@ -9,7 +9,12 @@ class Employee {
   }
 
   setName(name) {
-    this.#name = name;
+    if (name.length > 0) {
+      this.#name = name;
+      return this;
+    } else {
+      throw new Error("name is incorrect");
+    }
   }
 
   getName() {
@@ -64,17 +69,17 @@ console.log(ourEmployee.show());
 console.log(myName.setName("Zhakyp"));
 console.log(myName.getName());
 
-ourEmployee1.name = "Aman";
-ourEmployee1.age = 24;
-ourEmployee1.salary = 80000;
+// ourEmployee1.name = "Aman";
+// ourEmployee1.age = 24;
+// ourEmployee1.salary = 80000;
 
-ourEmployee2.name = "Samara";
-ourEmployee2.age = 20;
-ourEmployee2.salary = 75000;
+// ourEmployee2.name = "Samara";
+// ourEmployee2.age = 20;
+// ourEmployee2.salary = 75000;
 
-ourEmployee3.name = "Ulan";
-ourEmployee3.age = 24;
-ourEmployee3.salary = 70000;
+// ourEmployee3.name = "Ulan";
+// ourEmployee3.age = 24;
+// ourEmployee3.salary = 70000;
 
 // console.log(ourEmployee1);
 // console.log(ourEmployee2);
@@ -84,4 +89,13 @@ ourEmployee3.salary = 70000;
 // console.log(ourEmployee1.showName());
 // console.log(ourEmployee1.showSalary());
 
-console.log();
+// Array
+let employees = [
+  new Employee("Aman", 20, 70000),
+  new Employee("Samara", 20, 75000),
+  new Employee("Ulan", 24, 70000),
+];
+
+for (let employee of employees) {
+  console.log(employee);
+}

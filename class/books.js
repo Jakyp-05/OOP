@@ -19,6 +19,33 @@ class Books {
     return !this.#isRead;
   }
 
+  setBookName(bookName) {
+    if (bookName.length > 0) {
+      this.#bookName = bookName;
+      return this;
+    } else {
+      throw new Error("book name is incorrect!");
+    }
+  }
+
+  setAuthorBook(author) {
+    if (author.length > 0) {
+      this.#author = author;
+      return this;
+    } else {
+      throw new Error("book author is incorrect!");
+    }
+  }
+
+  setYearBook(year) {
+    if (typeof year === "number" && year > 0) {
+      this.#year = year;
+      return this;
+    } else {
+      throw new Error("year book is incorrect!");
+    }
+  }
+
   getBookName() {
     return this.#bookName;
   }
@@ -56,8 +83,20 @@ class Library {
 // Библиотека
 let myLibrary = new Library();
 
-console.log(myLibrary.addBook("Сонку дем", "Халит Эртугурул", 2020, true));
-console.log(myLibrary.addBook("Ант", "Нуржигит Кадырбеков", 2023, false));
+// Array library
+
+let librarys = [
+  myLibrary.addBook("Сонку дем", "Халит Эртугурул", 2020, true),
+  myLibrary.addBook("Ант", "Нуржигит Кадырбеков", 2023, false),
+  myLibrary.addBook("Мен атамды таптым", "Нуржигит Кадырбеков", 2024, false),
+];
+
+for (let library of librarys) {
+  console.log(library);
+}
+
+// console.log(myLibrary.addBook("Сонку дем", "Халит Эртугурул", 2020, true));
+// console.log(myLibrary.addBook("Ант", "Нуржигит Кадырбеков", 2023, false));
 
 console.log("Текущий список книг:", myLibrary.books);
 console.log(myLibrary.removeBook("Соңку дем"));
@@ -87,3 +126,22 @@ console.log(myBooks.getYearBook());
 
 // console.log(myLibrary);
 // console.log(myLibrary.addBook());
+
+// Set
+
+let setBooks = new Books();
+
+// Цепочки методов
+setBooks.setBookName("Ант").setAuthorBook("Кадырбеков Н.").setYearBook(2018);
+
+// set and get book name
+// console.log(setBooks.setBookName("Ант"));
+console.log(setBooks.getBookName());
+
+// set and get book author
+// console.log(setBooks.setAuthorBook("Кадырбеков Н."));
+console.log(setBooks.getAuthorBook());
+
+// set and get book year
+// console.log(setBooks.setYearBook(2018));
+console.log(setBooks.getYearBook());
