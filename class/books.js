@@ -95,9 +95,6 @@ for (let library of librarys) {
   console.log(library);
 }
 
-// console.log(myLibrary.addBook("Сонку дем", "Халит Эртугурул", 2020, true));
-// console.log(myLibrary.addBook("Ант", "Нуржигит Кадырбеков", 2023, false));
-
 console.log("Текущий список книг:", myLibrary.books);
 console.log(myLibrary.removeBook("Соңку дем"));
 console.log(myLibrary.getUnreadBooks());
@@ -110,38 +107,18 @@ myLibrary.getUnreadBooks().forEach((book) => {
 });
 
 // Книги
-
 let myBooks = new Books("Сонку дем", "Халит Эртугурул", 2020, false);
 
 console.log(myBooks.getBookName());
 console.log(myBooks.getAuthorBook());
 console.log(myBooks.getYearBook());
 
-// myBook.title = "Сонку дем";
-// myBook.author = "Халит Эртугурул";
-// myBook.year = 2021;
-// myBook.isRead = true;
-
-// console.log(myBook);
-
-// console.log(myLibrary);
-// console.log(myLibrary.addBook());
-
 // Set
-
 let setBooks = new Books();
 
 // Цепочки методов
 setBooks.setBookName("Ант").setAuthorBook("Кадырбеков Н.").setYearBook(2018);
 
-// set and get book name
-// console.log(setBooks.setBookName("Ант"));
 console.log(setBooks.getBookName());
-
-// set and get book author
-// console.log(setBooks.setAuthorBook("Кадырбеков Н."));
 console.log(setBooks.getAuthorBook());
-
-// set and get book year
-// console.log(setBooks.setYearBook(2018));
 console.log(setBooks.getYearBook());
