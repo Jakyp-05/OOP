@@ -59,6 +59,8 @@ class Books {
   }
 }
 
+// Манипуляция объектами в классах
+
 class Library {
   constructor() {
     this.books = [];
@@ -80,7 +82,7 @@ class Library {
   }
 }
 
-// Библиотека
+// Библиотека // Instance createn
 let myLibrary = new Library();
 
 // Array library
@@ -106,14 +108,14 @@ myLibrary.getUnreadBooks().forEach((book) => {
   );
 });
 
-// Книги
+// Книги // Instance createn
 let myBooks = new Books("Сонку дем", "Халит Эртугурул", 2020, false);
 
 console.log(myBooks.getBookName());
 console.log(myBooks.getAuthorBook());
 console.log(myBooks.getYearBook());
 
-// Set
+// Set // Instance createn
 let setBooks = new Books();
 
 // Цепочки методов
